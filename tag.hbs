@@ -1,0 +1,42 @@
+{{!< default}}
+
+{{! The main content area on the homepage }}
+<main role="main" class="{{#if @blog.cover}} custom-bg{{else}} default-bg{{/if}}"{{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="main__wrapper">
+    {{> menu}}
+
+        <h2 class="main__header">Tag archive: <span class="main__header--tagname">{{tag.name}}</span></h2>
+
+        {{! Each post will be output using this markup }}
+        {{#foreach posts}}
+        <article class="{{post_class}} post__wrapper" data-cols="4">
+            <div class="post__wrapper_helper post__wrapper_helper--notloaded el__transition">
+                {{content words="0"}}
+
+                <div class="post__preview el__transition">    
+                    <header class="post__header">
+                        <h2 class="post__title">
+                            <a href="{{url}}" class="post__link post__title_link"><span>{{{title}}}</span></a>
+                        </h2>
+                    </header>
+                    
+                    <p class="post__excerpt"><a href="{{url}}" class="post__link post__readmore">{{excerpt characters="120"}}&hellip;</a></p>
+                </div>
+
+                <footer class="post__meta">
+                    {{#if tags}}
+                    <ul class="post__tags">
+                        {{#foreach tags}}
+                        <li class="post__tag"><a href="{{url}}" class="post__link post__tag_link">{{name}}</a>{{#if @last}} {{else}}, {{/if}}</li>
+                        {{/foreach}}
+                    </ul>
+                    {{/if}}
+                </footer>
+            </div>
+        </article>
+        {{/foreach}}
+    </div>
+
+    {{!! After all the posts, we have the previous/next pagination links }}
+    {{pagination}}
+</main>

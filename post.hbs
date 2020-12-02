@@ -1,0 +1,92 @@
+{{!< default}}
+
+<main role="main">
+    <div class="main__wrapper">
+        {{> menu}}
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        <article class="{{post_class}}">
+        {{#post}}
+            {{#contentFor "metaTags"}} 
+                <meta property="article:author" content="{{author.name}}">
+            {{/contentFor}}
+
+            <div class="post__wrapper--subpage">    
+                <div class="post__media"></div>
+
+                <header class="post__header--subpage">
+                    <h2 class="post__title post__title--subpage">
+                        <a href="{{url}}" class="post__link post__title_link">{{{title}}}</a>
+                    </h2>
+
+                    <time datetime="{{date format='YYYY-MM-DD'}}" class="post__date">
+                        {{date format="MMM, DD, YYYY"}}
+                    </time> 
+                </header>
+
+                <section class="post__content">
+                    {{content}}
+                </section>
+
+                <footer class="post__footer">
+                    <div class="social social--share">
+                        <span class="social__label">Share: </span>
+                        <a class="social__icon social__icon--twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                            <span class="social__icon--hidden">Twitter</span>
+                        </a>
+                        <a class="social__icon social__icon--fb" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                            <span class="social__icon--hidden">Facebook</span>
+                        </a>
+                        <a class="social__icon social__icon--gplus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                            <span class="social__icon--hidden">Google+</span>
+                        </a>
+                    </div>
+                    
+                    {{#if tags}}
+                    <ul class="post__meta post__meta--subpage">
+                      {{#foreach tags}}
+                        <li class="post__tag"><a href="{{url}}" class="post__link post__tag_link">{{name}}</a>{{#if @last}} {{else}}, {{/if}}</li>
+                      {{/foreach}}
+                    </ul>
+                    {{/if}}
+                </footer>
+            </div>
+
+            <aside class="author">
+                {{#if author.image}}
+                <a href="{{author.website}}" class="author__avatar">
+                    <img src="{{author.image}}" alt="{{author.name}}">
+                </a>
+                {{/if}}
+
+                <h3 class="author__name">{{author.name}}</h3>
+                <p class="author__bio">{{author.bio}}</p>
+            </aside>
+
+            <div class="post__comments">
+                <div id="disqus_thread"></div>
+            </div>
+        {{/post}}
+        </article>
+    </div>
+</main>
+
+<script type="text/javascript">
+  {{> config}}
+
+  {{#post}}
+    var disqus_identifier = '{{id}}';
+  {{/post}}
+
+  if(typeof DISQUS !== 'object') {
+    (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+  }
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{meta_title}}">
+    <meta property="og:description" content="{{meta_description}}">
+    {{! Loading additional OpenGraph metatags}}
+    {{{block "metaTags"}}}
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" />
+
+	<!--[if (gte IE 6)&(lte IE 8)]>
+	<script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    {{> logo}}
+
+    {{{body}}}
+
+    {{> footer}}
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+    <script type="text/javascript">
+      {{> config}}
+
+      (function(g,h,o,s,t,z){g.GoogleAnalyticsObject=s;g[s]||(g[s]=
+      function(){(g[s].q=g[s].q||[]).push(arguments)});g[s].s=+new Date;
+      t=h.createElement(o);z=h.getElementsByTagName(o)[0];
+      t.src='//www.google-analytics.com/analytics.js';
+      z.parentNode.insertBefore(t,z)}(window,document,'script','ga'));
+      ga('create',ga_ua);ga('send','pageview');
+
+      (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.type = 'text/javascript';
+      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+</body>
+</html>

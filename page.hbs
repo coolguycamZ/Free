@@ -1,0 +1,34 @@
+{{!< default}}
+
+<main role="main">
+    <div class="main__wrapper">
+        {{> menu}}
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        <article class="{{post_class}}">
+        {{#post}}
+            {{#contentFor "metaTags"}} 
+                <meta property="article:author" content="{{author.name}}">
+            {{/contentFor}}
+
+            <div class="post__wrapper--subpage">    
+                <div class="post__media"></div>
+
+                <header class="post__header--subpage">
+                    <h2 class="post__title post__title--subpage">
+                        <a href="{{url}}" class="post__link post__title_link">{{{title}}}</a>
+                    </h2>
+
+                    <time datetime="{{date format='YYYY-MM-DD'}}" class="post__date">
+                        {{date format="MMM, DD, YYYY"}}
+                    </time> 
+                </header>
+
+                <section class="post__content">
+                    {{content}}
+                </section>
+            </div>
+        {{/post}}
+        </article>
+    </div>
+</main>
