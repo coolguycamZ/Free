@@ -394,6 +394,7 @@ main {
 	padding: 56px 36px 36px 36px;
 	position: absolute;
 	top: 100%;
+	width: 100%;
 	z-index: 1;
 }
 
