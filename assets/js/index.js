@@ -26,7 +26,8 @@
         if(
         	$(document.body).hasClass('home-template') ||
         	$(document.body).hasClass('archive-template') ||
-        	$(document.body).hasClass('tag-template')
+        	$(document.body).hasClass('tag-template') ||
+        	$(document.body).hasClass('author-template')
         ) {
           // get the post images
           var blocks = [];

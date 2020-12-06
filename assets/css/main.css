@@ -1,8 +1,8 @@
 /*---------------------------------
 
  Portfolio Ghost Theme by GavickPro
-           05-06-2014
-             v.1.0.0
+           09-08-2014
+             v.1.1.0
 
 - - - - - - - - - - - - - - - - - -
 
@@ -551,7 +551,9 @@ main {
 
 .author__avatar {
 	float: left;
+	height: auto;
 	margin: 0 60px 0 0;
+	max-width: 80px;
 }
 
 .author__name {
@@ -562,6 +564,10 @@ main {
 .author__bio {
 	font-size: 12px;
 	margin: 10px 0 0 0;
+}
+
+.author__subscribe {
+	font-size: 12px;
 }
 
 /*---------------------------------

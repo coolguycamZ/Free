@@ -62,8 +62,10 @@
                 </a>
                 {{/if}}
 
-                <h3 class="author__name">{{author.name}}</h3>
-                <p class="author__bio">{{author.bio}}</p>
+                <h3 class="author__name">{{author}} <a class="author__subscribe" href="{{url}}rss/">Subscribe {{author.name}}'s posts RSS</a></h3>
+                <p class="author__bio">
+                	{{author.bio}}
+                </p>
             </aside>
 
             <div class="post__comments">
