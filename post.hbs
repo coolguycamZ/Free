@@ -62,7 +62,7 @@
                 </a>
                 {{/if}}
 
-                <h3 class="author__name">{{author}} <a class="author__subscribe" href="{{url}}rss/">Subscribe {{author.name}}'s posts RSS</a></h3>
+                <h3 class="author__name">{{author}} {{#author}}<a class="author__subscribe" href="{{url}}rss">{{/author}}Subscribe {{author.name}}'s posts RSS</a></h3>
                 <p class="author__bio">
                 	{{author.bio}}
                 </p>
