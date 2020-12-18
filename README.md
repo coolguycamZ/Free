@@ -8,6 +8,8 @@ Free theme for [Ghost](http://github.com/tryghost/ghost/) prepared by [GavickPro
 
 **Important** All below packages contain the "portfolio" directory with the theme which should be moved to the content/themes directory.
 
+[Download v.1.1.1 for Ghost 0.5.0](https://github.com/GavickPro/Portfolio-Free-Ghost-Theme/releases/tag/v1.1.1)
+
 [Download v.1.1.0 for Ghost 0.5.0](https://github.com/GavickPro/Portfolio-Free-Ghost-Theme/releases/tag/v1.1.0)
 
 [Download v.1.0.0 for Ghost 0.4.2](https://github.com/GavickPro/Portfolio-Free-Ghost-Theme/releases/tag/v1.0.0)
