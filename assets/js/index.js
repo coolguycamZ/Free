@@ -58,7 +58,7 @@
                   clearInterval(timer);
                   // generate the image wrapper
                   var src = $(img).attr('src');
-                  img.remove();
+                  jQuery(img).remove();
                   var img_container = $('<div class="post__image el__transition_long" style="background-image: url(\''+src+'\')"></div>');
                   img_container.appendTo(wrapper);
                   wrapper.removeClass('post__wrapper_helper--notloaded');
