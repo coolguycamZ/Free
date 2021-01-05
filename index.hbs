@@ -9,7 +9,9 @@
         {{#foreach posts}}
         <article class="{{post_class}} post__wrapper" data-cols="4">
             <div class="post__wrapper_helper post__wrapper_helper--notloaded el__transition">
-                {{content words="0"}}
+               {{#if image}}
+               		<img src="{{image}}" alt="{{{title}}}" class="post__image_to_load" />
+               {{/if}}
 
                 <div class="post__preview el__transition">    
                     <header class="post__header">

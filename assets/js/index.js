@@ -15,10 +15,7 @@
         	var featured_image = $('img[alt="featured-image"]');
         	var featured_video = $('.post__content iframe:first-child')
         	// check if the featured image exists
-        	if(featured_image && featured_image.length > 0) {
-        		// create container for the image
-        		featured_image.appendTo($('.post__media'));
-        	} else if(featured_video && featured_video.length > 0) {
+        	if(featured_video && featured_video.length > 0) {
         		featured_video.appendTo($('.post__media'));
         	}
         }
@@ -48,7 +45,7 @@
           
           $('.post__wrapper_helper--notloaded').each(function(i, wrapper) {
             wrapper = $(wrapper);
-            var img = wrapper.find('p > img')[0];
+            var img = wrapper.find('.post__image_to_load')[0];
             if(img) {
               // wait for the images
               var timer = setInterval(function() {

@@ -12,7 +12,11 @@
             {{/contentFor}}
 
             <div class="post__wrapper--subpage">    
-                <div class="post__media"></div>
+                {{#if image}}
+                	<div class="post__media">
+                		<img src="{{image}}" alt="{{{title}}}" />
+                	</div>
+                {{/if}}
 
                 <header class="post__header--subpage">
                     <h2 class="post__title post__title--subpage">
