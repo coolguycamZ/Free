@@ -55,7 +55,7 @@ h4,
 h5,
 h6 { 
 	color: #363636;
-	font-weight: 500;
+	font-weight: 600;
 }
 h2 { font-size: 28px; }
 h3 { font-size: 24px; }
@@ -525,7 +525,7 @@ main {
 
 .post__tag_link {
 	color: #b5b5b5;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .post__comments {
@@ -579,7 +579,7 @@ blockquote {
 	border-left: 4px solid #59c0ab;
 	background: #fdfbec;
 	font-size: 12px;
-	font-weight: 500;
+	font-weight: 600;
 	line-height: 2;
 	margin: 30px 0;
 	padding: 15px 30px 15px 45px;
