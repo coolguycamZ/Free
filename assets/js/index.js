@@ -1,5 +1,5 @@
 /**
- * Main JS file for Casper behaviours
+ * Main JS file for Portfolio behaviours
  */
 
 /*globals jQuery, document */

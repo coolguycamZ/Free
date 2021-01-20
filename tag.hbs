@@ -3,7 +3,9 @@
 {{! The main content area on the homepage }}
 <main role="main" class="{{#if @blog.cover}} custom-bg{{else}} default-bg{{/if}}"{{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{/if}}>
     <div class="main__wrapper">
-    {{> menu}}
+    {{#if @blog.navigation}}
+    	{{navigation}}
+    {{/if}}
 
         <h2 class="main__header">Tag archive: <span class="main__header--tagname">{{tag.name}} ({{pagination.total}})</span></h2>
 

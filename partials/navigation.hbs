@@ -1,0 +1,8 @@
+{{! Put your menu content here or make this file empty in order to remove the menu }}
+<nav class="menu">
+	<div class="menu__wrap">
+		{{#foreach navigation}}
+		<a href="{{url absolute="true"}}" class="menu__item{{#if current}} menu__item--active{{/if}} menu__item--{{slug}}">{{label}}</a>    
+		{{/foreach}}
+	</div>
+</nav>

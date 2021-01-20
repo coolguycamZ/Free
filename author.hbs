@@ -3,7 +3,9 @@
 {{! The main content area on the homepage }}
 <main role="main" class="{{#if @blog.cover}} custom-bg{{else}} default-bg{{/if}}"{{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{/if}}>    
     <div class="main__wrapper">
-    {{> menu}}
+    {{#if @blog.navigation}}
+    	{{navigation}}
+    {{/if}}
     
         {{#author}}
         <h2 class="main__header">Posts by: <span class="main__header--username">{{name}} ({{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}})</span></h2>
