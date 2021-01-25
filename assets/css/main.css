@@ -14,6 +14,7 @@
 	2.3 Footer
 	2.4 Pagination
 3. Post items
+	3.1 Post navigation
 4. Typography
 5. RWD
 
@@ -569,6 +570,80 @@ main {
 
 .author__subscribe {
 	font-size: 12px;
+}
+
+/*---------------------------------
+3.1. Post navigation
+----------------------------------*/
+
+.post__navigation {
+	height: 54px;
+	left: 0;	
+	position: fixed;
+	top: 50%;
+	width: 54px;
+}
+
+.post__navigation--next {
+	left: auto;
+	right: 0;
+}
+
+.post__navigation_link {
+	background: #333;
+	border-radius: 0 50% 50% 0;
+	display: block;
+	height: 54px;
+	margin-left: -12px;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+	width: 54px;
+}
+
+.post__navigation_link--next {
+	border-radius: 50% 0 0 50%;
+	margin-left: auto;
+	margin-right: -12px;
+}
+
+.post__navigation_link:hover {
+	margin-left: 0;
+}
+
+.post__navigation_link--next:hover {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.post__navigation_link--prev:hover .post__navigation_icon {
+	text-indent: -10px;
+}
+
+.post__navigation_link--next:hover .post__navigation_icon {
+	text-indent: 10px;
+}
+
+.post__navigation_icon {
+	color: #fff;
+	display: block;
+	font-size: 40px;
+	font-style: normal;
+	line-height: 45px;
+	text-align: center;
+	text-indent: 6px;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+	width: 54px;
+}
+
+.post__navigation_icon--next {
+	text-indent: -6px;
 }
 
 /*---------------------------------

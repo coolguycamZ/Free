@@ -77,6 +77,22 @@
             <div class="post__comments">
                 <div id="disqus_thread"></div>
             </div>
+            
+            {{#prev_post}}
+            <div class="post__navigation post__navigation--prev">
+            	<a class="post__navigation_link post__navigation_link--prev" href="{{url}}" title="{{title}}">
+            		<i class="post__navigation_icon post__navigation_icon--prev">&lsaquo;</i>
+            	</a>
+            </div>
+            {{/prev_post}}
+            
+            {{#next_post}}
+            <div class="post__navigation post__navigation--next">
+            	<a class="post__navigation_link post__navigation_link--next" href="{{url}}" title="{{title}}">
+            		<i class="post__navigation_icon post__navigation_icon--next">&rsaquo;</i>
+            	</a>
+            </div>
+            {{/next_post}}
         {{/post}}
         </article>
     </div>
