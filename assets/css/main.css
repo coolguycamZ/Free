@@ -665,6 +665,10 @@ code {
 	padding: 3px;
 }
 
+pre code {
+	background: transparent;
+}
+
 ul {
 	line-height: 2;
 	padding-left: 20px;
