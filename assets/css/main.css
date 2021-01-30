@@ -443,6 +443,7 @@ main {
 
 .post__media {
 	margin: -72px -72px 20px -72px;
+	text-align: center;
 }
 
 .post__excerpt {
